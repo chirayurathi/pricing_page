@@ -1,0 +1,13 @@
+.Content{
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.PriceLists{
+    margin: 30px auto;
+    display: flexbox;
+    justify-content: space-around;
+    align-items: baseline;
+    vertical-align: bottom;
+    align-self:bottom ;
+}

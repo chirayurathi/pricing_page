@@ -1,0 +1,14 @@
+.Footer{
+    border-top:1px solid gray ;
+    margin: auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0;
+    display: flex;
+}
+.Footer h3{
+    font-weight: 700!important;
+}
+.Footer{
+    text-align: left;
+}

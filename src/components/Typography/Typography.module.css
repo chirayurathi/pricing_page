@@ -1,0 +1,27 @@
+.Typography{
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.Typography h1{
+    font-size: 4em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+}
+.Typography h2{
+    font-size: 3em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.Typography h3{
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+.Typography p{
+    margin: 10px 0;
+}
