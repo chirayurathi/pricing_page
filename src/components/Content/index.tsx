@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "../Typography";
 import Style from "./Content.module.css";
 import PriceCard from "./PriceCard";
@@ -34,6 +34,9 @@ const Content = (props: { width: number }) => {
       buttonText:"Contact Us"
     }
   ]
+
+  const [active,setActive] = useState(-1)
+
   return (
     <div className={Style.Content} style={{ width: `${props.width}%` }}>
       <Typography element="h3" color="grey" paddingLeft={10} paddingRight={10}>
@@ -42,8 +45,8 @@ const Content = (props: { width: number }) => {
         little customization.
       </Typography>
       <div className={Style.PriceLists}>
-        {priceList.map(ele => (
-          <PriceCard {...ele} width={30} />
+        {priceList.map((ele,index) => (
+          <PriceCard {...ele} width={30} active={active} setActive={setActive} key={index} index={index}/>
         ))}
       </div>
     </div>

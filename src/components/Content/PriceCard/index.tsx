@@ -4,9 +4,9 @@ import { PriceCardInterface } from '../PriceCardInterface';
 import Style from './PriceCard.module.css'
 
 const PriceCard = (
-    props: PriceCardInterface & {width:number}) => {
+    props: PriceCardInterface & {width:number,key:number,index:number, active:number, setActive:React.Dispatch<React.SetStateAction<number>>}) => {
   return (
-    <div className={Style.PriceCard} style={{width:`${props.width}%`}}>
+    <div className={`${Style.PriceCard} ${props.index===props.active&&Style.CardActive}`} style={{width:`${props.width}%`}}>
         <div className={Style.CardHeader}>
             <Typography element='h3'>{props.cardTitle}</Typography>
             {props.subTitle!==undefined && <Typography element='p'>{props.subTitle}</Typography>}
@@ -18,7 +18,7 @@ const PriceCard = (
             <Typography element='p'>{`${props.storage} GB of storage`}</Typography>
             <Typography element='p'>Help center access</Typography>
             <Typography element='p'>{props.support}</Typography>
-            <button>{props.buttonText}</button>
+            <button onClick={()=>{console.log(props.index); props.setActive(props.index)}}>{props.buttonText}</button>
         </div>
     </div>
   );

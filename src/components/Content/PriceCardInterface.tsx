@@ -6,5 +6,5 @@ export interface PriceCardInterface {
     support:string,
     buttonText:string,
     subTitle?:string,
-    isStar?:boolean
+    isStar?:boolean,
 }
